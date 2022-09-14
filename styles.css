@@ -181,12 +181,23 @@ button {
   top: 0;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 700px) {
   .box-container {
     padding: 0 20px;
     width: 100%;
   }
-  .card {
-    flex-direction: column;
+  #histories{
+ 
+    display: grid;
+     
+    grid-template-columns: repeat(3, 3fr);
+     
+    grid-gap: 1rem;
+     
+    }
+   .card {
+    grid-gap: 1rem;
+    
+   }  
   }
-}
+  
