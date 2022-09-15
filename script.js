@@ -38,15 +38,18 @@ const typeController = (e) => {
     return;
   }
 
-  userText = newLetter;
+  userText += newLetter;
 
   const newLetterCorrect = validate(newLetter);
+  // console.log(newLetter)
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount = errorCount + 1;
   }
+
 
   // check if given question text is equal to user typed text
   if (questionText === userText) {
@@ -55,6 +58,7 @@ const typeController = (e) => {
 };
 
 const validate = (key) => {
+  console.log(key)
   if (key === questionText[userText.length - 1]) {
     return true;
   }
