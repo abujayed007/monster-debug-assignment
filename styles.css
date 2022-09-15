@@ -15,11 +15,18 @@ body {
   width: 70%;
   margin: 0 auto;
 }
+#blogs{
+  padding: 20px;
+  display: flex;
+  justify-content: end;
+  color: white;
+  text-decoration: none;
+  font-size: xx-large;
+}
 #blog-text h1,p,h4,h2{
   color: white;
   text-align: center;
   padding: 30px;
- 
 }
 #question {
   height: 100px;
